@@ -1,11 +1,11 @@
 <%@page import="java.util.List"%>
-<%@page import="com.filesystem.servlet.UploadDetail"%>
+<%@page import="com.filesystem.servlet.DownloadDetail"%>
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
-		<title>File Upload/Download</title>
+		<title>File Download</title>
 		
 		<link rel="stylesheet" href="resource/css/main.css" />
 	</head>
@@ -17,7 +17,7 @@
 		    		<tr align="center"><th>File Name</th><th>File Size</th><th>Upload Status</th><th>Action</th></tr>
 		    	</thead>
 		    	<tbody>
-		    		<% List<UploadDetail> uploadDetails = (List<UploadDetail>)request.getAttribute("uploadedFiles");
+		    		<% List<DownloadDetail> uploadDetails = (List<DownloadDetail>)request.getAttribute("uploadedFiles");
 		    			for(int i=0; i<uploadDetails.size(); i++) {
 		    	    %>
 		    	    <tr>

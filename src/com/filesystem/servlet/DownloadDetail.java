@@ -2,7 +2,7 @@ package com.filesystem.servlet;
 
 import java.io.Serializable;
 
-public class UploadDetail implements Serializable {
+public class DownloadDetail implements Serializable {
 
 	private long fileSize;
 	private String fileName, uploadStatus;

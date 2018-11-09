@@ -32,12 +32,12 @@ public class UploadedFilesServlet extends HttpServlet {
 			fileUploadDirectory.mkdirs();
 		}
 
-		UploadDetail details = null;
+		DownloadDetail details = null;
 		File[] allFiles = fileUploadDirectory.listFiles();
-		List<UploadDetail> fileList = new ArrayList<UploadDetail>();		
+		List<DownloadDetail> fileList = new ArrayList<DownloadDetail>();		
 
 		for (File file : allFiles) {
-			details = new UploadDetail();
+			details = new DownloadDetail();
 			details.setFileName(file.getName());
 			details.setFileSize(file.length() / 1024);
 			fileList.add(details);
